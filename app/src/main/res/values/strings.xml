@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Food Roulette</string>
+    <string name="Sign_Up">Sign Up</string>
+    <string name="Forgot_Password">Forgot Password?</string>
+    <string name="Password">Password</string>
+    <string name="Username">Username</string>
+    <string name="Remember">Remember me</string>
+    <string name="Login">Login</string>
+    <string name="title_activity_options">Options</string>
+    <string name="Email">Email</string>
+    <string name="First">First Name</string>
+    <string name="Last">Last Name</string>
+    <string name="Birthday">Birth Date</string>
+    <string name="ConfirmPassword">Confirm Password</string>
+    <string name="Add">Add restaurant</string>
+    <string name="Type">Type restaurant</string>
+    <string name="Title">Restaurants At Random</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_set_filters">Set Filters</string>
+    <string name="current">Current Location</string>
+    <string name="Five_miles">5mi.</string>
+    <string name="Ten_miles">10mi.</string>
+    <string name="Fifteen_miles">15mi.</string>
+    <string name="Twenty_miles">20mi.</string>
+    <string name="Distance">Distance:</string>
+    <string name="Star_rating">Star rating:</string>
+    <string name="Starting_point">Starting point:</string>
+    <string name="Choose_from_map">Choose from map:</string>
+    <string name="Choose_by_postal">Choose by postal code:</string>
+    <string name="Zip_code">Postal code</string>
+    <string name="Search">Search</string>
+    <string name="Carry">Carry_out</string>
+    <string name="Dine">Dine-in</string>
+    <string name="title_activity_login">Login</string>
+    <string name="create">Create/Edit List</string>
+    <string name="choose_randomly">Choose Randomly </string>
+    <string name="home">OPENING </string>
+
+
+</resources>

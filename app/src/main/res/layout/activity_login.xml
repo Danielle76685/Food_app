@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/light"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="100dp" >
+
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="200dp"
+        android:layout_height="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="277dp"
+        android:ems="10"
+        android:hint="@string/Username"
+        android:inputType="textEmailAddress"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        tools:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/Pass"
+        android:layout_width="200dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/Email"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        tools:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/Sign"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/Email"
+        android:layout_alignRight="@id/Email"
+        android:layout_below="@+id/Pass"
+        android:text="@string/Sign_Up"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="306dp" />
+
+    <Button
+        android:id="@+id/Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Email"
+        android:layout_alignStart="@+id/Email"
+        android:layout_below="@+id/Pass"
+        android:text="@string/Forgot_Password"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/Remember"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Email"
+        android:layout_alignStart="@+id/Email"
+        android:layout_below="@+id/Sign"
+        android:text="@string/Remember"
+        tools:text="@string/Remember" />
+
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="114dp"
+        android:text="@string/Login"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="200dp"
+        android:layout_height="81dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:text="@string/Title"
+        android:textColor="#ffffff"
+        android:textSize="30sp" />
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView"-->
+    <!--android:layout_width="206dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginTop="47dp"-->
+    <!--android:contentDescription="@android:string/untitled"-->
+    <!--android:text="Restaurants At"-->
+    <!--android:textAppearance="@android:style/TextAppearance.Large"-->
+    <!--android:textSize="30sp"-->
+    <!--android:typeface="normal"-->
+    <!--app:fontFamily="cursive" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/textView"-->
+    <!--android:layout_centerVertical="@id/textView"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:contentDescription="@android:string/untitled"-->
+    <!--android:text="Random"-->
+    <!--android:textAppearance="@android:style/TextAppearance.Large"-->
+    <!--android:textSize="30sp"-->
+    <!--android:typeface="normal"-->
+    <!--app:fontFamily="cursive" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/imageView2"-->
+    <!--android:layout_width="98dp"-->
+    <!--android:layout_height="77dp"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="40dp"-->
+    <!--app:srcCompat="@drawable/r_b_r"-->
+    <!--/>-->
+
+</RelativeLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/light"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="100dp" >
+
+
+    <CheckBox
+    android:id="@+id/distance15"
+    android:layout_width="wrap_content"
+    android:layout_height="23dp"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignTop="@+id/distance20"
+    android:layout_marginEnd="138dp"
+    android:layout_marginRight="150dp"
+    android:text="@string/Fifteen_miles"
+    android:textSize="14sp" />
+
+    <CheckBox
+    android:id="@+id/distance10"
+    android:layout_width="wrap_content"
+    android:layout_height="23dp"
+    android:layout_alignStart="@+id/ratingBar"
+    android:layout_alignLeft="@+id/ratingBar"
+    android:layout_alignTop="@+id/distance15"
+    android:text="@string/Ten_miles"
+    android:textSize="14sp" />
+
+    <RatingBar
+    android:id="@+id/ratingBar"
+    style="@style/Widget.AppCompat.RatingBar.Indicator"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="188dp"
+    android:isIndicator="false"
+    android:numStars="5" />
+
+    <CheckBox
+    android:id="@+id/current"
+    android:layout_width="wrap_content"
+    android:layout_height="28dp"
+    android:layout_alignParentTop="true"
+    android:layout_alignStart="@+id/rating"
+    android:layout_alignLeft="@+id/rating"
+    android:layout_marginTop="90dp"
+    android:text="@string/current"
+    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <TextView
+    android:id="@+id/rating"
+    android:layout_width="89dp"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/ratingBar"
+    android:layout_toStartOf="@+id/ratingBar"
+    android:layout_toLeftOf="@+id/ratingBar"
+    android:text="@string/Star_rating"
+    android:textSize="16sp" />
+
+    <TextView
+    android:id="@+id/distance"
+    android:layout_width="94dp"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/distance20"
+    android:layout_toStartOf="@+id/ratingBar"
+    android:layout_toLeftOf="@+id/ratingBar"
+    android:text="@string/Distance"
+    android:textSize="16sp" />
+
+    <TextView
+    android:id="@+id/start"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_alignStart="@+id/current"
+    android:layout_alignLeft="@+id/current"
+    android:layout_marginTop="57dp"
+    android:text="@string/Starting_point"
+    android:textSize="16sp" />
+
+    <CheckBox
+    android:id="@+id/distance20"
+    android:layout_width="wrap_content"
+    android:layout_height="23dp"
+    android:layout_alignTop="@+id/distance5"
+    android:layout_toEndOf="@+id/ratingBar"
+    android:layout_toRightOf="@+id/ratingBar"
+    android:text="@string/Twenty_miles"
+    android:textSize="14sp" />
+
+    <CheckBox
+    android:id="@+id/distance5"
+    android:layout_width="wrap_content"
+    android:layout_height="23dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignStart="@+id/current"
+    android:layout_alignLeft="@+id/current"
+    android:layout_marginBottom="271dp"
+    android:text="@string/Five_miles"
+    android:textSize="14sp" />
+
+    <TextView
+    android:id="@+id/map"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_alignStart="@+id/current"
+    android:layout_alignLeft="@+id/current"
+    android:layout_marginTop="139dp"
+    android:text="@string/Choose_from_map"
+    android:textSize="16sp" />
+
+    <EditText
+    android:id="@+id/map1"
+    android:layout_width="356dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_alignStart="@+id/current"
+    android:layout_alignLeft="@+id/current"
+    android:layout_marginTop="172dp"
+    android:ems="10"
+    android:hint="@android:string/search_go"
+    android:inputType="text|textPersonName"
+    android:text="@android:string/search_go"
+    android:textSize="16sp" />
+
+    <TextView
+    android:id="@+id/zip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_alignStart="@+id/current"
+    android:layout_alignLeft="@+id/current"
+    android:layout_marginTop="236dp"
+    android:text="@string/Choose_by_postal"
+    android:textSize="16sp" />
+
+    <EditText
+    android:id="@+id/zip1"
+    android:layout_width="152dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_alignStart="@+id/current"
+    android:layout_alignLeft="@+id/current"
+    android:layout_marginTop="268dp"
+    android:ems="10"
+    android:hint="@string/Zip_code"
+    android:inputType="textPersonName"
+    android:text="@string/Zip_code"
+    android:textSize="16sp" />
+
+    <Button
+    android:id="@+id/searchByFilters"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="46dp"
+    android:text="@string/Search"
+    android:textSize="16sp" />
+
+    <CheckBox
+    android:id="@+id/Carry"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignStart="@+id/ratingBar"
+    android:layout_alignLeft="@+id/ratingBar"
+    android:layout_marginBottom="127dp"
+    android:layout_marginStart="-25dp"
+    android:text="@string/Carry" />
+
+    <CheckBox
+    android:id="@+id/Dine"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="-25dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignEnd="@+id/ratingBar"
+    android:layout_alignRight="@+id/ratingBar"
+    android:layout_alignTop="@+id/Carry"
+    android:layout_marginBottom="127dp"
+    android:layout_marginRight="-25dp"
+    android:text="@string/Dine" />
+</RelativeLayout>
