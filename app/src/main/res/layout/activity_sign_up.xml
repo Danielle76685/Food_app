@@ -6,106 +6,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/light"
+    android:background="#ffffff"
     tools:context=".SignUp">
 
 
-    <EditText
-        android:id="@+id/Email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/firstName"
-        android:layout_alignLeft="@+id/firstName"
-        android:layout_marginTop="272dp"
-        android:ems="10"
-        android:hint="@string/Email"
-        android:inputType="textEmailAddress" />
+    <!--<EditText-->
+        <!--android:id="@+id/Email"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignStart="@+id/firstName"-->
+        <!--android:layout_alignLeft="@+id/firstName"-->
+        <!--android:layout_marginTop="268dp"-->
+        <!--android:ems="10"-->
+        <!--android:hint="@string/Email"-->
+        <!--android:inputType="textEmailAddress" />-->
 
-    <EditText
-        android:id="@+id/Password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/firstName"
-        android:layout_alignLeft="@+id/firstName"
-        android:layout_marginBottom="252dp"
-        android:ems="10"
-        android:hint="@string/Password"
-        android:inputType="textPassword" />
+    <!--<EditText-->
+        <!--android:id="@+id/Password"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignStart="@+id/firstName"-->
+        <!--android:layout_alignLeft="@+id/firstName"-->
+        <!--android:layout_marginBottom="252dp"-->
+        <!--android:ems="10"-->
+        <!--android:hint="@string/Password"-->
+        <!--android:inputType="textPassword" />-->
 
-    <EditText
-        android:id="@+id/Confirm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/Email"
-        android:layout_alignLeft="@+id/firstName"
-        android:layout_marginBottom="177dp"
-        android:ems="10"
-        android:hint="@string/ConfirmPassword"
-        android:inputType="textPassword" />
+    <!--<EditText-->
+        <!--android:id="@+id/Confirm"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignStart="@+id/firstName"-->
+        <!--android:layout_alignLeft="@+id/firstName"-->
+        <!--android:layout_marginBottom="174dp"-->
+        <!--android:ems="10"-->
+        <!--android:hint="@string/ConfirmPassword"-->
+        <!--android:inputType="textPassword" />-->
 
-    <Button
-        android:id="@+id/Signup"
-        android:layout_width="99dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
-        android:text="@string/Sign_Up" />
+    <!--<Button-->
+        <!--android:id="@+id/Signup"-->
+        <!--android:layout_width="99dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="69dp"-->
+        <!--android:text="@string/Sign_Up" />-->
 
-    <TextView
-        android:id="@+id/Title"
-        android:layout_width="114dp"
-        android:layout_height="52dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
-        android:layout_toStartOf="@+id/Signup"
-        android:layout_toLeftOf="@+id/Signup"
-        android:contentDescription="@string/appbar_scrolling_view_behavior"
-        android:text="@string/Sign_Up"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        tools:text="@string/Sign_Up" />
+    <!--<TextView-->
+        <!--android:id="@+id/Title"-->
+        <!--android:layout_width="114dp"-->
+        <!--android:layout_height="52dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_toStartOf="@+id/Signup"-->
+        <!--android:layout_toLeftOf="@+id/Signup"-->
+        <!--android:contentDescription="@string/appbar_scrolling_view_behavior"-->
+        <!--android:text="@string/Sign_Up"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:textSize="30sp"-->
+        <!--android:textStyle="bold"-->
+        <!--tools:text="@string/Sign_Up" />-->
 
-    <EditText
-        android:id="@+id/firstName"
-        android:layout_width="124dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="115dp"
-        android:ems="10"
-        android:hint="@string/First"
-        android:inputType="textPersonName" />
+    <!--<EditText-->
+        <!--android:id="@+id/firstName"-->
+        <!--android:layout_width="124dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginLeft="40dp"-->
+        <!--android:layout_marginStart="57dp"-->
+        <!--android:layout_marginTop="115dp"-->
+        <!--android:ems="10"-->
+        <!--android:hint="@string/First"-->
+        <!--android:inputType="textPersonName" />-->
 
-    <EditText
-        android:id="@+id/lastName"
-        android:layout_width="124dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/firstName"
-        android:layout_marginEnd="57dp"
-        android:layout_marginRight="40dp"
-        android:ems="10"
-        android:hint="@string/Last"
-        android:inputType="textPersonName" />
+    <!--<EditText-->
+        <!--android:id="@+id/lastName"-->
+        <!--android:layout_width="124dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignTop="@+id/firstName"-->
+        <!--android:layout_marginEnd="57dp"-->
+        <!--android:layout_marginRight="40dp"-->
+        <!--android:ems="10"-->
+        <!--android:hint="@string/Last"-->
+        <!--android:inputType="textPersonName" />-->
 
-    <EditText
-        android:id="@+id/birthday"
-        android:layout_width="124dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/firstName"
-        android:layout_alignLeft="@+id/firstName"
-        android:layout_marginTop="194dp"
-        android:ems="10"
-        android:hint="@string/Birthday"
-        android:inputType="date" />
+    <!--<EditText-->
+        <!--android:id="@+id/birthday"-->
+        <!--android:layout_width="124dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignStart="@+id/firstName"-->
+        <!--android:layout_alignLeft="@+id/firstName"-->
+        <!--android:layout_marginTop="194dp"-->
+        <!--android:ems="10"-->
+        <!--android:hint="@string/Birthday"-->
+        <!--android:inputType="date" />-->
 </RelativeLayout>

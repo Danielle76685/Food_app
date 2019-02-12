@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run()
             {
-                Intent homeintent = new Intent(MainActivity.this, Login.class);
+                Intent homeintent = new Intent(MainActivity.this, Options.class);
                 startActivity(homeintent);
                 finish();
             }

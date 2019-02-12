@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.support.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "People.db";
@@ -14,6 +15,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL3 = "first_name";
     public static final String COL4 = "last_name";
     public static final String COL5 = "birthday";
+    public static final String COL6 = "list";
+
+    public static final String TABLE_NAME1 = "list";
+    public static final String COL11 = "restaurants";
+
+    public static final String TABLE_NAME2 = "filter";
+    public static final String COL21 = "currentLocation";
+    public static final String COL22 = "mapSearch";
+    public static final String COL23 = "zip";
+    public static final String COL24 = "distance";
+    //carry-out/dine-in checkbox
+    public static final String COL26 = "rating";
 
 
 
@@ -28,13 +41,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COL2 + " TEXT," +
                 COL3 + " TEXT," +
                 COL4 + " TEXT," +
-                COL5 + " TEXT)");
+                COL5 + " TEXT," +
+                COL6 + " TEXT)");
+
+        db.execSQL("CREATE TABLE " + TABLE_NAME1 + "(" +
+                COL11 + " TEXT)");
+
+        db.execSQL("CREATE TABLE " + TABLE_NAME2 + "(" +
+                COL21 + " TEXT,"+
+                COL22 + " TEXT," +
+                COL23 + " TEXT," +
+                COL24 + " TEXT," +
+                COL26 + " TEXT)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME1);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME2);
         onCreate(db);
     }
     /*Inserting into database*/

@@ -5,40 +5,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/light"
+    android:background="#ffffff"
     tools:context=".Options">
 
 
     <Button
-        android:id="@+id/Choose"
+        android:id="@+id/set"
+        android:layout_width="135dp"
+        android:layout_height="58dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="266dp"
+        android:background="@drawable/button_background"
+        android:text="@string/title_activity_set_filters" />
+
+    <Button
+        android:id="@+id/btnMap"
+        android:layout_width="141dp"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/button_background"
+        android:text="Map" />
+
+    <Button
+        android:id="@+id/Create"
         android:layout_width="140dp"
         android:layout_height="58dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="226dp"
-        android:text="@string/choose_randomly" />
-
-    <Button
-        android:id="@+id/Create"
-        android:layout_width="wrap_content"
-        android:layout_height="58dp"
-        android:layout_alignLeft="@+id/Choose"
-        android:layout_alignRight="@+id/Choose"
-        android:layout_alignStart="@+id/Choose"
-        android:layout_alignEnd="@+id/Choose"
-        android:layout_centerInParent="true"
+        android:layout_marginTop="147dp"
+        android:background="@drawable/button_background"
         android:text="@string/create" />
 
     <Button
-        android:id="@+id/Set"
-        android:layout_width="wrap_content"
+        android:id="@+id/Search"
+        android:layout_width="135dp"
         android:layout_height="58dp"
-        android:layout_alignLeft="@+id/Choose"
-        android:layout_alignStart="@+id/Choose"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/Choose"
-        android:layout_alignEnd="@+id/Choose"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="230dp"
-        android:text="@string/title_activity_set_filters" />
+        android:layout_marginBottom="216dp"
+        android:background="@drawable/button_background"
+        android:text="@string/Search" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="12dp"
+        android:text="Set Your Filters or Create a List"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="24sp" />
 </RelativeLayout>

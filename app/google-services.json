@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "899324251782",
+    "firebase_url": "https://food-roulette-415af.firebaseio.com",
+    "project_id": "food-roulette-415af",
+    "storage_bucket": "food-roulette-415af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:899324251782:android:50dc67362ae0fe0d",
+        "android_client_info": {
+          "package_name": "com.powell.randomeats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "899324251782-pk1740673vttv2j8p8sht9vna3b32ncp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw3GTglkAkPRXrqYCdQnEGF1duWU-RIms"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

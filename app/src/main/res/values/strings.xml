@@ -35,6 +35,8 @@
     <string name="create">Create/Edit List</string>
     <string name="choose_randomly">Choose Randomly </string>
     <string name="home">OPENING </string>
+    <string name="google_map_api_key">AIzaSyCF1EGesugzJyeB8ySuTMRTSrJZDglzYHw</string>
+    <string name="logo">OPENING </string>
 
 
 </resources>

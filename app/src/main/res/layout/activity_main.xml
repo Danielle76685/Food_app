@@ -7,7 +7,7 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/light"
+    android:background="#ffffff"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="100dp" >
 
@@ -19,4 +19,12 @@
         android:layout_centerInParent="true"
         android:text="@string/home"
         android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="320dp"
+        android:layout_height="237dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/logo"
+        app:srcCompat="@drawable/logo" />
 </RelativeLayout>
