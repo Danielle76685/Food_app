@@ -12,7 +12,7 @@
     <string name="Last">Last Name</string>
     <string name="Birthday">Birth Date</string>
     <string name="ConfirmPassword">Confirm Password</string>
-    <string name="Add">Add restaurant</string>
+    <string name="Add">Add restaurant to list</string>
     <string name="Type">Type restaurant</string>
     <string name="Title">Restaurants At Random</string>
     <string name="title_activity_maps">Map</string>
@@ -24,19 +24,25 @@
     <string name="Twenty_miles">20mi.</string>
     <string name="Distance">Distance:</string>
     <string name="Star_rating">Star rating:</string>
-    <string name="Starting_point">Starting point:</string>
-    <string name="Choose_from_map">Choose from map:</string>
+    <string name="Starting_point">Choose starting point for search:</string>
+    <string name="Choose_from_map">or</string>
     <string name="Choose_by_postal">Choose by postal code:</string>
     <string name="Zip_code">Postal code</string>
-    <string name="Search">Search</string>
+    <string name="Search">Choose from Map</string>
     <string name="Carry">Carry_out</string>
     <string name="Dine">Dine-in</string>
     <string name="title_activity_login">Login</string>
-    <string name="create">Create/Edit List</string>
+    <string name="create">Create/Edit your faves</string>
     <string name="choose_randomly">Choose Randomly </string>
     <string name="home">OPENING </string>
     <string name="google_map_api_key">AIzaSyCF1EGesugzJyeB8ySuTMRTSrJZDglzYHw</string>
     <string name="logo">OPENING </string>
+    <string name="title_activity_set__restaurant__filters">Set_Restaurant_Filters</string>
+    <string name="filters">Set Your Location Filters or Create a List</string>
+    <string name="random">Randomly Find a Restaurant</string>
+    <string name="title_activity_wheel">Wheel</string>
+    <string name="type">Type:</string>
+    <string name="search">Search Using Your List</string>
 
 
 </resources>

@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Layout -->
+
+    <color name="lightGreen">#8EA604</color>
+    <color name="yellow">#E5BB00</color>
+    <color name="lightOrange">#EC9E05</color>
+    <color name="DarkOrange">#D76A03</color>
+    <color name="red">#BE3100</color>
+
+    <color name="white">#FCEFF9</color>
+    <color name="buttonColor">#95D7AE</color>
+    <color name="headerColor">#454851</color>
+    <color name="pink"> #ff6666</color>
+
+
+
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>

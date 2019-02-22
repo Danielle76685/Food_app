@@ -1,7 +1,12 @@
 package com.powell.randomeats;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,16 +28,18 @@ import com.powell.randomeats.R;
 
 public class Options extends AppCompatActivity {
 
-    Button choose, Set, create, random;
+    Button choose, Set, create, Random;
     private static final String TAG = "Options";
-    private static final int ERROR_DIALOG_REQUEST = 9001;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
 
         create =(Button) findViewById(R.id.Create);
-        Set = (Button) findViewById(R.id.set);
+        Random = (Button) findViewById(R.id.random);
+
 
 
 
@@ -57,7 +64,7 @@ public class Options extends AppCompatActivity {
             }
 
         });
-        Set.setOnClickListener(new View.OnClickListener() {
+        Random.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -66,10 +73,8 @@ public class Options extends AppCompatActivity {
             }
 
         });
-        if(isServicesOK())
-        {
-            init();
-        }
+
+
     }
 
     public void openrandom() {
@@ -88,43 +93,18 @@ public class Options extends AppCompatActivity {
 
     //map code for checking services with btn to open map
 
-    private  void init()
-    {
-        Button btnMap = (Button) findViewById(R.id.btnMap);
-        btnMap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Options.this, MapsActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-    //checks to see if the user has the correct version of google play
-    public boolean isServicesOK()
-    {
-        Log.d(TAG, "isServicesOK: checking google services version");
-        int available = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(Options.this);
 
-        if(available == ConnectionResult.SUCCESS)
-        {
-            //everything is fine
-            Log.d(TAG, "isServicesOK: Google Play services is working");
-            return true;
-        }else if(GoogleApiAvailability.getInstance().isUserResolvableError(available))
-        {
-            //an error occurred but we can fix it
-            Log.d(TAG, "isServicesOK: an error occurred, but we can fix it");
-            //allows you to get dialog right from google for error
-            Dialog dialog = GoogleApiAvailability.getInstance().getErrorDialog(Options.this, available, ERROR_DIALOG_REQUEST);
-            dialog.show();
-        }else
-        {
-            Toast.makeText(this, "You can't make map requests", Toast.LENGTH_SHORT).show();
-
-        }
-        return false;
     }
 
 
 
-}
+
+
+
+
+
+
+
+
+
+
