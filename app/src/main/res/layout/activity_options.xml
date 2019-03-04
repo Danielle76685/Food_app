@@ -17,16 +17,17 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp">
+
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textSize="40dp"
-
-
                 android:text="RandomEats"
 
-                android:textColor="@color/red" />
+
+                android:textColor="@android:color/background_dark"
+
+                android:textSize="40dp" />
 
         </RelativeLayout>
 
@@ -37,18 +38,8 @@
             android:gravity="center_horizontal">
 
             <Button
-                android:id="@+id/random"
-                android:layout_width="300dp"
-                android:layout_height="120dp"
-                android:layout_marginTop="50dp"
-                android:background="@drawable/button_background"
-                android:text="@string/random"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                android:tooltipText="Have restaurants randomly generated for you." />
-
-            <Button
                 android:id="@+id/Create"
-                android:layout_width="300dp"
+                android:layout_width="250dp"
                 android:layout_height="120dp"
                 android:layout_marginTop="50dp"
 
@@ -58,14 +49,27 @@
                 android:tooltipText="Create or edit a list of your favorite restaurants." />
 
             <Button
+                android:id="@+id/random"
+                android:layout_width="250dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/button_background"
+                android:text="@string/random"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="14sp"
+                android:tooltipText="Have restaurants randomly generated for you." />
+
+
+
+            <Button
                 android:id="@+id/Search"
-                android:layout_width="300dp"
+                android:layout_width="250dp"
                 android:layout_height="120dp"
                 android:layout_marginTop="50dp"
                 android:background="@drawable/button_background"
                 android:text="@string/search"
                 android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                android:tooltipText="Search for restaurants using a list or by set filters" />
+                android:tooltipText="Search for restaurants using your created list" />
 
         </LinearLayout>
 

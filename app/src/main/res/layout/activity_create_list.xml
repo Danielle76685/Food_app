@@ -8,6 +8,16 @@
     android:background="#ffffff"
     tools:context=".CreateList">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Create a List"
+
+
+        android:textColor="@android:color/background_dark"
+
+        android:textSize="40dp" />
 
     <ListView
         android:id="@+id/list"

@@ -39,10 +39,10 @@
     <string name="logo">OPENING </string>
     <string name="title_activity_set__restaurant__filters">Set_Restaurant_Filters</string>
     <string name="filters">Set Your Location Filters or Create a List</string>
-    <string name="random">Randomly Find a Restaurant</string>
+    <string name="random">Random Generator</string>
     <string name="title_activity_wheel">Wheel</string>
     <string name="type">Type:</string>
-    <string name="search">Search Using Your List</string>
+    <string name="search">Search Using List</string>
 
 
 </resources>

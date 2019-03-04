@@ -16,22 +16,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/wheel"
-        android:duration="1600"
-        android:fromDegrees="0"
-        android:interpolator="@android:anim/linear_interpolator"
-        android:pivotX="50%"
-        android:pivotY="50%"
-        android:repeatCount="infinite"
-        android:toDegrees="358"/>
-    <rotate
-        android:duration="1600"
-        android:fromDegrees="0"
-        android:interpolator="@android:anim/linear_interpolator"
-        android:pivotX="50%"
-        android:pivotY="50%"
-        android:repeatCount="infinite"
-        android:toDegrees="358"
-    />
+       />
 
 
 

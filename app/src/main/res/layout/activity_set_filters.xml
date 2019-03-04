@@ -53,17 +53,6 @@
 
 
     <Button
-        android:id="@+id/searchByFilters"
-        android:layout_width="116dp"
-        android:layout_height="43dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="214dp"
-        android:background="@drawable/button_background"
-        android:text="@android:string/search_go"
-        android:textSize="16sp" />
-
-    <Button
         android:id="@+id/map1"
         android:layout_width="174dp"
         android:layout_height="45dp"
