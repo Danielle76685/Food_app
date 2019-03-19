@@ -42,7 +42,8 @@
     <string name="random">Random Generator</string>
     <string name="title_activity_wheel">Wheel</string>
     <string name="type">Type:</string>
-    <string name="search">Search Using List</string>
+    <string name="search">Search By List</string>
+    <string name="title_activity_get_nearby_places">GetNearbyPlaces</string>
 
 
 </resources>

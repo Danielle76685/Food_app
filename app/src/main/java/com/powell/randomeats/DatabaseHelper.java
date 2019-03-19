@@ -5,7 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.support.annotation.Nullable;
+import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "People.db";
@@ -79,6 +79,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return true;
     }
 
+    public boolean addRestaurant(String place)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL11, place);
+        long ins = db.insert(TABLE_NAME1, null, contentValues);
+
+        if (ins == -1) return false;
+        else return true;
+    }
+
     /*checking if email exist*/
     public Boolean chkemail(String email) {
 
@@ -95,5 +106,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("SELECT * from " + TABLE_NAME + " where email = ? and password=?", new String[]{email, password});
         if(cursor.getCount()>0) return true;
         else return false;
+    }
+
+    public Cursor populate()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+//        Cursor cursor = db.rawQuery("SELECT * from " + TABLE_NAME1 + " where restaurants = ?", new String[]{});
+        String query = "Select * from " + TABLE_NAME1;
+        Cursor cursor = db.rawQuery(query, null);
+
+        return cursor;
     }
 }

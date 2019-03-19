@@ -29,6 +29,7 @@ import android.webkit.GeolocationPermissions;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -90,6 +91,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     //widgets
     private AutoCompleteTextView mSearchText;
     private ImageView mGps;         //added for marker
+    private double latitude, longitude;
+    private int ProximityRadiius = 10000;
+    private ImageView res;
     //private PlaceInfo mPlace;
 //geolocate and init
 
@@ -104,6 +108,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
         mSearchText = (AutoCompleteTextView) findViewById(R.id.input_search);
         mGps = (ImageView) findViewById(R.id.ic_gps);
+        res = (ImageView) findViewById(R.id.restaurants_nearby);
+
 
 
         getLocationPermission();
@@ -132,7 +138,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if (actionId == EditorInfo.IME_ACTION_SEARCH
                         || actionId == EditorInfo.IME_ACTION_DONE
                         || keyEvent.getAction() == KeyEvent.ACTION_DOWN
-                        || keyEvent.getAction() == KeyEvent.KEYCODE_ENTER) {
+                        || keyEvent.getAction() == KeyEvent.KEYCODE_ENTER) {  //change for magnifier button
 
                     //execute our method for searching
                     geoLocate();
@@ -150,13 +156,51 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-        hideSoftKeyboard();
+
+        //hideSoftKeyboard();
+        res.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d(TAG, "onClick: clicked restaurant icon");
+                String restaurant = "restaurant";
+                Object transferData[] = new Object[2];
+                GetNearbyPlaces getNearbyPlaces = new GetNearbyPlaces();
+
+                mMap.clear();
+                String url = getUrl(latitude, longitude, restaurant);
+                transferData[0] = mMap;
+                transferData[1] = url;
+
+                getNearbyPlaces.execute(transferData);
+                Log.d(TAG, "Searching for nearby restaurants");
+
+
+            }
+        });
+
 
 
     }
 
+    private String getUrl(double latitude, double longitude, String restaurant)
+    {
+        StringBuilder googleURL = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
+        googleURL.append("location=" + latitude + "," + longitude);
+        googleURL.append("&radius=" + ProximityRadiius);
+        googleURL.append("&type=" + restaurant);
+        googleURL.append("&sensor=true");
+        googleURL.append("&key=" + "AIzaSyCF1EGesugzJyeB8ySuTMRTSrJZDglzYHw");
+
+        Log.d("GoogleMapsActivity", "url = " + googleURL.toString());
+
+        return googleURL.toString();
+    }
+
+
 
     private void geoLocate() {
+        //change image button to image view
+
         Log.d(TAG, "geoLocate: geolocating");
 
         String searchString = mSearchText.getText().toString();
@@ -178,9 +222,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             moveCamera(new LatLng(address.getLatitude(), address.getLongitude()), DEFAULT_ZOOM,
                     address.getAddressLine(0));
         }
+
+
     }
 
+
+
+
+
     private void moveCamera(LatLng latLng, float zoom, String title) {
+        latitude = latLng.latitude;
+        longitude = latLng.longitude;
+
         Log.d(TAG, "moveCamera: moving the camera to: lat: " + latLng.latitude + ", lng: " + latLng.longitude);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
 
@@ -191,7 +244,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.addMarker(options);
         }
 
-        hideSoftKeyboard();
+        //hideSoftKeyboard();
     }
 
     //1. checks to see if the user has the correct version of google play
@@ -241,7 +294,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onResume();
         if (checkMapServices()) {
             if (mLocationPermissionsGranted) {
-
+                getLastKnownLocation();
             } else {
                 getLocationPermission();
             }
@@ -272,6 +325,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     private void getLastKnownLocation() { //location
+
+
         Log.d(TAG, "getLastKnownLocation: called.");
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);//location
         try {
@@ -302,16 +357,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         } catch (SecurityException e) {
             Log.e(TAG, "getDeviceLocation: SecurityException: " + e.getMessage());
         }
+
     }
 
 
-
-//    private void initMap() {
-//        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-//                .findFragmentById(R.id.map);
-//
-//        mapFragment.getMapAsync(MapsActivity.this);  //not needed
-//    }
 
 
     private void getLocationPermission() {
@@ -357,7 +406,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         switch (requestCode) {
             case PERMISSIONS_REQUEST_ENABLE_GPS: {
                 if (mLocationPermissionsGranted) {
-
+                    getLastKnownLocation();
                 } else {
                     getLocationPermission();
                 }
@@ -365,6 +414,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
     }
+
+
 
 
     /**
@@ -376,6 +427,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+
+
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         Toast.makeText(this, "Map is ready", Toast.LENGTH_SHORT).show();
@@ -400,10 +454,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    private void hideSoftKeyboard() {         //added for marker
-        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+//    private void hideSoftKeyboard() {         //added for marker
+//        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
-    }
+    //}
 
 
 }
